@@ -46,5 +46,7 @@ const obj4 = {4: "E" , 6: "F"}
 
 const obj3 = {...obj1, ...obj2, ...obj4}
 
-console.log(obj3);
+// console.log(obj3);
+
+console.log(`${Object.keys(user1)}:${Object.values(user1)}`);
 
