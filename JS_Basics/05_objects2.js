@@ -178,7 +178,7 @@ const Annie = new Person1("Annie", "Tirkey", 24, "Brown")
 const Sonali = new Person2("Sonali", "sonali@gmail.com", "MCA")
 const Ashim = new Person3("Ashim" , "ashim@gamil.com" , "BCA")
 
-// Annie.name()
-// console.log(Annie.name());
-// Ashim.bio()
-// Sonali.bio()
+Annie.name()
+console.log(Annie.name());
+Ashim.bio()
+Sonali.bio()
