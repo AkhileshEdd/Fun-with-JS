@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+    html {
+        margin: 0;
+      }
+      
+      span {
+        display: block;
+      }
+      .canvas {
+        margin: 100px auto 100px;
+        width: 80%;
+        text-align: center;
+      }
+      
+      .button {
+        width: 100px;
+        height: 100px;
+        border: solid black 2px;
+        display: inline-block;
+      }
+      
+      #grey {
+        background: grey;
+      }
+      
+      #orange {
+        background: orange;
+      }
+      #black {
+        background: #212121;
+      }
+      #yellow {
+        background: yellow;
+      }
+      #green {
+        background: rgb(0, 255, 64);
+      }
+      #pink {
+        background: rgb(255, 0, 200);
+      }
+      </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1>Color Switcher</h1>
+        <span class="button" id="grey"></span>
+        <span class="button" id="orange"></span>
+        <span class="button" id="black"></span>
+        <span class="button" id="yellow"></span>
+        <span class="button" id="pink"></span>
+        <span class="button" id="green"></span>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.button')
+    const body = document.querySelector('body')
+
+    buttons.forEach(function(button){
+        // console.log(button);
+        button.addEventListener('click',function(e){
+            // console.log(e);
+            // console.log(e.target);
+
+            if(e.target.id === "grey"){
+                body.style.backgroundColor = "grey"
+            }
+            if(e.target.id === "orange"){
+                body.style.backgroundColor = "orange"
+            }
+            if(e.target.id === "black"){
+                body.style.backgroundColor = "black"
+            }
+            if(e.target.id === "yellow"){
+                body.style.backgroundColor = "yellow"
+            }
+            if(e.target.id === "pink"){
+                body.style.backgroundColor = "rgb(255, 0, 200)"
+            }
+            if(e.target.id === "green"){
+                body.style.backgroundColor = "rgb(0, 255, 64)"
+            }
+        })
+    })
+</script>
+</html>
