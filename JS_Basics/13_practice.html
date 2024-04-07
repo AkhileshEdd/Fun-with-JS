@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const a = function (e) {
+      console.log("Hello World");
+    };
+
+    const changeText = function(){
+        document.querySelector("h1").innerHTML = "Hello from JS"
+    }
+
+    const stopText = setTimeout(changeText, 3000);
+    // console.log("Hello from js");
+
+    const stop = document.querySelector('#stop')
+    stop.addEventListener('click',function(){
+        clearTimeout(stopText)
+    })
+    
+  </script>
+</html>
