@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Events</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h2>Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="img1"
+            src="https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="img1"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="img2"
+            src="https://images.pexels.com/photos/2361600/pexels-photo-2361600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="img3"
+            src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="img4"
+            src="https://images.pexels.com/photos/1915182/pexels-photo-1915182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="img5"
+            src="https://images.pexels.com/photos/1826060/pexels-photo-1826060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </li>
+        <li><a href="https://www.google.com/" id="google"> Visit google</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const img2 = document.getElementById("img2")
+    const img = document.getElementById("images")
+
+    /*
+    img2.addEventListener('click',function(e){
+        console.log("Image 2 clicked",e);
+    },true)
+    img.addEventListener('click', function(e){
+        console.log("Images clicked", e.target);
+    },true)
+
+    Event Propagation(Bubbling and capturing)
+
+    img2.addEventListener('click',function(e){
+        console.log("Image 2 clicked",e);
+        // e.stopPropagation()
+    },false)
+
+    img.addEventListener('click', function(e){
+        console.log("Images clicked", e.target);
+    },false)
+
+    document.getElementById("google").addEventListener('click',function(e){
+        e.preventDefault()
+    })*/
+
+    img.addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+
+            let removeImg = e.target.parentNode.remove()
+        }
+
+    })
+  </script>
+</html>
