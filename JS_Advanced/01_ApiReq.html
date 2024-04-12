@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APIs</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores saepe non,
+    at maxime labore quaerat aliquid? Sunt, quos? Debitis saepe illum animi quam
+    magni repellat distinctio cumque facere eligendi impedit?
+  </body>
+  <script>
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'https://randomuser.me/api/')
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data.results[0].name.first);
+        }
+    }
+    xhr.send()
+  </script>
+</html>
