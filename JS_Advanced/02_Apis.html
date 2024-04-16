@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api</title>
+  </head>
+  <body>
+    <div class="img">
+      <ul id="ul"></ul>
+    </div>
+  </body>
+  <script>
+    const fecthPromise = fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+    );
+
+    fecthPromise.then((res) => {
+      const responsePromise = res.json();
+      responsePromise.then((data) => {
+        console.log(data[0]);
+        resImg = data[0].image
+        data.forEach(element => {
+            const li = document.createElement('li')
+            li.innerHTML = `${element.name}`
+            console.log(li);
+            document.querySelector('#ul').appendChild(li)
+        });
+    });
+});
+
+    console.log("started request");
+
+    
+
+    
+  </script>
+</html>
